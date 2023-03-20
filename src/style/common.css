@@ -193,3 +193,15 @@ textarea::placeholder {
   line-height: 2.4rem;
   color: var(--mainColor);
 }
+
+ul::-webkit-scrollbar {
+  height: 0.8rem;
+  background-color: rgba(243, 245, 250, 0.1);
+  border-radius: 1rem;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: var(--fontLightGray);
+  cursor: pointer;
+  border-radius: 1rem;
+}
