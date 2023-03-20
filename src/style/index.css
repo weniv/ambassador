@@ -116,7 +116,7 @@
 }
 
 .section-title {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 4rem;
   line-height: 4.8rem;
   text-align: center;
@@ -783,6 +783,11 @@
 
   .banner .banner-btn-list {
     bottom: 1rem;
+  }
+
+  .banner .banner-btn {
+    width: 10px;
+    height: 14px;
   }
 
   .banner .banner-list p {
