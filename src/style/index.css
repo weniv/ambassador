@@ -234,6 +234,9 @@
   text-align: center;
   justify-content: space-between;
   padding: 0 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.4rem;
 }
 
 .ambassador-benefit .benefit-list img {
@@ -321,6 +324,21 @@
   flex-shrink: 0;
   height: 52rem;
   border: none;
+}
+
+.ambassador-past-activity .activity-list a {
+  position: relative;
+}
+
+.ambassador-past-activity .activity-list a::after {
+  content: "";
+  position: absolute;
+  right: 4rem;
+  top: 4rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  background: url("../assets/icon/icon-diagonal-arrow-gray.svg") no-repeat
+    center / cover;
 }
 
 .ambassador-past-activity .activity-info {
@@ -559,6 +577,11 @@
     height: 44rem;
   }
 
+  .ambassador-past-activity .activity-list a::after {
+    right: 3rem;
+    top: 3rem;
+  }
+
   .ambassador-past-activity .activity-info {
     padding: 3rem 3rem 1.6rem;
   }
@@ -571,8 +594,9 @@
   }
 
   .ambassador-past-activity .activity-info p {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
   }
 
   .ambassador-past-activity .thumbnail {
@@ -698,6 +722,9 @@
   }
 
   .ambassador-benefit .benefit-list {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
     grid-template-columns: repeat(auto-fill, 12rem);
     padding: 0;
   }
@@ -744,6 +771,16 @@
 
   .ambassador-past-activity .activity-list li {
     height: 35.8rem;
+  }
+
+  .ambassador-past-activity .activity-list a::after {
+    display: none;
+  }
+
+  .ambassador-past-activity .activity-list p {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 
   /* 푸터 */
