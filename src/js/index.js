@@ -97,7 +97,7 @@ bannerBtnList.addEventListener("click", (e) => {
 
 let bannerSlide = setInterval(() => {
   nextSide();
-}, 4000);
+}, 7000);
 
 banner.addEventListener("mouseover", () => {
   clearInterval(bannerSlide);
