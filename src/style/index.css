@@ -475,6 +475,7 @@
   font-size: 1.6rem;
   line-height: 1.9rem;
   color: var(--fontGray);
+  opacity: 0.8;
 }
 
 .top-btn {
@@ -797,6 +798,8 @@
   }
 
   .footer .copyrigt {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
     padding: 3.2rem 0;
   }
 }
