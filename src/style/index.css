@@ -97,6 +97,7 @@
   height: 1.4rem;
   border-radius: 1rem;
   background: var(--fontMain);
+  padding: 0;
   cursor: pointer;
 }
 
@@ -371,7 +372,7 @@
 /* 푸터 */
 .footer {
   background: #fff;
-  padding: 10rem 0 20.8rem;
+  padding: 10rem 0 0;
 }
 
 .footer .footer-top {
@@ -469,7 +470,7 @@
 
 .footer .copyrigt {
   text-align: center;
-  padding-top: 6rem;
+  padding: 6rem 0;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
@@ -605,7 +606,7 @@
 
   /* 푸터 */
   .footer {
-    padding: 5rem 0 20rem;
+    padding: 5rem 0 0;
   }
 
   .footer .footer-top {
@@ -796,7 +797,7 @@
   }
 
   .footer .copyrigt {
-    padding-top: 3.2rem;
+    padding: 3.2rem 0;
   }
 }
 
@@ -820,11 +821,6 @@
 
   .banner .banner-btn-list {
     bottom: 1rem;
-  }
-
-  .banner .banner-btn {
-    width: 0.6rem;
-    height: 0.8rem;
   }
 
   .banner .banner-list p {
