@@ -106,7 +106,7 @@ banner.addEventListener("mouseover", () => {
 banner.addEventListener("mouseout", () => {
   bannerSlide = setInterval(() => {
     nextSide();
-  }, 3000);
+  }, 7000);
 });
 
 let startPoint = 0;
