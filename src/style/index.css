@@ -599,9 +599,10 @@
 }
 
 .footer .link-list {
+  width: 60%;
   flex-shrink: 0;
   display: grid;
-  grid-template-columns: repeat(2, minmax(auto, 32rem));
+  grid-template-columns: repeat(2, minmax(auto, 1fr));
   grid-template-rows: repeat(2, 16rem);
   gap: 1.8rem;
 }
@@ -675,15 +676,17 @@
   opacity: 0.8;
 }
 
+/* top 버튼 */
 .top-btn {
   display: none;
   position: fixed;
+  /* bottom: 15rem; */
   bottom: 4rem;
   right: 3rem;
   width: 5rem;
   height: 5rem;
-  background: rgba(141, 146, 153, 0.9) url("../assets/icon/icon-up-arrow.svg")
-    no-repeat center / 3.2rem 3.2rem;
+  background: var(--ColorGrayLv2) url("../assets/icon/icon-up-arrow.svg")
+    no-repeat center / 2.4rem 2.4rem;
   border-radius: 50%;
 }
 
@@ -734,71 +737,18 @@
     text-align: left;
   }
 
-  /* section - 위니브 엠버서더 소개 */
-  .ambassador-intro .intro-wrap {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .ambassador-intro .intro-wrap > div {
-    flex-basis: 100%;
-  }
-
   /* section - 혜택, 일정 */
   .ambassador-benefit .benefit-list {
     grid-template-columns: repeat(auto-fit, 16rem);
   }
 
+  /* section - 진행 일정 */
   .ambassador-schedule .schedule-list {
     flex-wrap: wrap;
   }
 
   .ambassador-schedule .schedule-list li::before {
-    /* width: 16rem; */
     margin: 0 2rem;
-  }
-
-  /* section - 활동 후기 */
-  .ambassador-review .review-list {
-    gap: 2.6rem;
-  }
-
-  .ambassador-review .review-list li {
-    padding: 3rem;
-  }
-
-  /* section - 지난 활동 */
-  .ambassador-past-activity .activity-list {
-    gap: 2.6rem;
-  }
-
-  .ambassador-past-activity .activity-list li {
-    height: 44rem;
-  }
-
-  .ambassador-past-activity .activity-list a::after {
-    right: 3rem;
-    top: 3rem;
-  }
-
-  .ambassador-past-activity .activity-info {
-    padding: 3rem 3rem 1.6rem;
-  }
-
-  .ambassador-past-activity .activity-info > div {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.6rem;
-    margin-bottom: 1.6rem;
-  }
-
-  .ambassador-past-activity .activity-info p {
-    font-size: 2rem;
-    line-height: 2.4rem;
-  }
-
-  .ambassador-past-activity .thumbnail {
-    padding: 3.3rem 4rem 0;
   }
 
   /* 푸터 */
@@ -847,7 +797,7 @@
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 780px) {
   /* 배너 */
   .banner .banner-list p {
     font-size: 1.6rem;
@@ -1020,9 +970,24 @@
     display: none;
   }
 
+  .ambassador-past-activity .activity-info {
+    padding: 3rem 3rem 2rem;
+  }
+
+  .ambassador-past-activity .activity-info > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+
   .ambassador-past-activity .activity-list p {
     font-size: 1.6rem;
     line-height: 2.2rem;
+  }
+
+  .ambassador-past-activity .thumbnail {
+    padding: 3.3rem 4rem 0;
   }
 
   /* section - 활동 후기 */
@@ -1107,6 +1072,11 @@
   .footer .copyrigt {
     padding: 4rem 0;
   }
+
+  /* top 버튼 */
+  /* .top-btn {
+    bottom: 12rem;
+  } */
 }
 
 @media (max-width: 550px) {
