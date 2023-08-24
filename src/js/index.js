@@ -5,8 +5,8 @@ const bannerList = document.querySelectorAll(".banner-list li");
 const bannerBtnList = document.querySelector(".banner-btn-list");
 const bannerBtnItems = document.querySelectorAll(".banner-btn");
 
-const setTransformValue = (value) => {
-  bannerList.forEach((item) => {
+const setTransformValue = value => {
+  bannerList.forEach(item => {
     item.setAttribute("style", `transform: translateX(${value});`);
   });
 };
@@ -79,7 +79,7 @@ const nextSide = () => {
   }
 };
 
-bannerBtnList.addEventListener("click", (e) => {
+bannerBtnList.addEventListener("click", e => {
   if (e.target.tagName == "BUTTON") {
     const activedBtn = document.querySelector(".banner-btn.active");
     const bannerBtn = e.target;
@@ -112,11 +112,11 @@ banner.addEventListener("mouseout", () => {
 let startPoint = 0;
 let endPoint = 0;
 
-banner.addEventListener("touchstart", (e) => {
+banner.addEventListener("touchstart", e => {
   startPoint = e.touches[0].pageX;
 });
 
-banner.addEventListener("touchend", (e) => {
+banner.addEventListener("touchend", e => {
   endPoint = e.changedTouches[0].pageX;
   if (startPoint < endPoint) {
     prevSide();
@@ -125,7 +125,7 @@ banner.addEventListener("touchend", (e) => {
   }
 });
 
-const activeScrollTopBtn = (htmlScrollTop) => {
+const activeScrollTopBtn = htmlScrollTop => {
   if (htmlScrollTop > 100) {
     topBtn.classList.add("active");
   } else {
@@ -144,4 +144,19 @@ topBtn.addEventListener("click", () => {
 window.addEventListener("scroll", function () {
   const htmlScrollTop = document.querySelector("html").scrollTop;
   activeScrollTopBtn(htmlScrollTop);
+});
+
+// FAQ 리스트 버튼
+const faqList = document.querySelector(".faq-list");
+
+faqList.addEventListener("click", e => {
+  if (e.target.tagName == "BUTTON") {
+    const targetItem = e.target.closest("li");
+
+    if (targetItem.classList.contains("active")) {
+      targetItem.classList.remove("active");
+    } else {
+      targetItem.classList.add("active");
+    }
+  }
 });
