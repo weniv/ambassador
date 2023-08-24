@@ -116,11 +116,6 @@
   background: var(--ColorBackground);
 }
 
-/* section 공통 */
-/* .section .wrap {
-  padding: 8rem 0;
-} */
-
 .section-title {
   color: var(--ColorSurface);
   font-size: 4rem;
@@ -361,6 +356,10 @@
   gap: 3.2rem;
   padding: 2rem 2rem 5.2rem;
   overflow-x: scroll;
+}
+
+.ambassador-past-activity .activity-list::-webkit-scrollbar {
+  background-color: #fff;
 }
 
 .ambassador-past-activity .activity-list li {
@@ -768,16 +767,6 @@
     padding: 3rem;
   }
 
-  .ambassador-review .review-list .profile {
-    margin-bottom: 2rem;
-  }
-
-  .ambassador-review .review-list .profile-img {
-    width: 6rem;
-    height: 6rem;
-    margin-right: 1.2rem;
-  }
-
   /* section - 지난 활동 */
   .ambassador-past-activity .activity-list {
     gap: 2.6rem;
@@ -813,15 +802,14 @@
   }
 
   /* 푸터 */
-  .footer {
-    padding: 5rem 0 0;
+  .footer .footer-top {
+    padding: 10rem 0 12rem;
   }
 
-  .footer .footer-top {
+  .footer .footer-top .wrap {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    padding-bottom: 15rem;
   }
 
   .footer .weniv-greeting {
@@ -830,6 +818,7 @@
 
   .footer .link-list {
     width: 100%;
+    grid-template-rows: repeat(2, 6rem);
   }
 
   .footer .link-list a {
@@ -853,7 +842,7 @@
 
   .footer .btn-apply {
     left: 50%;
-    bottom: 4rem;
+    bottom: -8rem;
     transform: translateX(-50%);
   }
 }
@@ -875,15 +864,10 @@
     padding-top: 3rem;
   }
 
-  /* section 공통 */
-  .section .wrap {
-    padding: 4rem 0;
-  }
-
   .section-title {
     font-weight: 700;
     font-size: 2.4rem;
-    line-height: 2.9rem;
+    line-height: 3.2rem;
   }
 
   .shadow-box {
@@ -892,8 +876,8 @@
 
   /* section - 공지 */
   .ambassador-notice .wrap {
-    gap: 1.2rem 1.4rem;
-    padding: 3rem;
+    gap: 1rem 1.2rem;
+    padding: 2.8rem 3rem;
   }
 
   .ambassador-notice .wrap::after {
@@ -902,45 +886,45 @@
   }
 
   /* section - 위니브 엠버서더 소개 */
-  .ambassador-intro .intro-title {
-    margin-bottom: 5rem;
+  .ambassador-intro .wrap {
+    padding: 4rem 0 5rem;
   }
 
-  .ambassador-intro .intro-wrap {
+  .ambassador-intro .intro-title {
+    margin-bottom: 4rem;
+  }
+
+  .ambassador-intro .intro-list {
+    flex-direction: column;
+    padding: 0 1.4rem;
     gap: 4rem;
   }
 
-  .ambassador-intro .intro-wrap h3 {
-    font-size: 2rem;
+  .ambassador-intro .intro-list h3 {
+    font-size: 1.8rem;
     line-height: 2.4rem;
     margin-bottom: 2rem;
   }
 
-  .ambassador-intro .intro-wrap > div {
-    flex-basis: 100%;
-  }
-
-  .ambassador-intro .intro-wrap .intro-contents {
+  .ambassador-intro .intro-contents {
     font-size: 1.6rem;
-    line-height: 2.8rem;
   }
 
   /* section - 혜택 */
+  .ambassador-benefit .wrap {
+    padding: 5rem 0;
+  }
+
   .ambassador-benefit .benefit-title {
-    margin-bottom: 3.2rem;
+    margin-bottom: 3.4rem;
   }
 
   .ambassador-benefit .benefit-list {
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-    grid-template-columns: repeat(auto-fill, 12rem);
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    grid-template-columns: repeat(auto-fill, 10rem);
     padding: 0;
-  }
-
-  /* 진행 일정 */
-  .ambassador-schedule .schedule-list .content {
-    width: 16rem;
   }
 
   /* section - 활동 안내 */
@@ -948,38 +932,83 @@
     padding: 4rem 0;
   }
 
+  .ambassador-activity .section-title {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
   .ambassador-activity p {
     font-size: 1.6rem;
-    line-height: 2.8rem;
-    margin-bottom: 2rem;
+    line-height: 2.2rem;
+    margin: 1.2rem 0 2.4rem;
   }
 
-  /* section - 활동 후기 */
-  .ambassador-review .review-title {
-    margin-bottom: 4rem;
+  .ambassador-activity .btn-l {
+    width: 18rem;
+    height: 4rem;
   }
 
-  .ambassador-review .review-list {
-    gap: 2rem;
+  /* 진행 일정 */
+  .ambassador-schedule .wrap {
+    padding: 4rem 0 5rem;
   }
 
-  .ambassador-review .review-list li {
-    height: 33.2rem;
+  .ambassador-schedule .section-title {
+    margin-bottom: 3.2rem;
   }
 
-  .ambassador-review .review-list p {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 7;
-    -webkit-box-orient: vertical;
+  .ambassador-schedule .section-title span {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  .ambassador-schedule .schedule-list {
+    gap: 0;
+    flex-direction: column;
+  }
+
+  .ambassador-schedule .schedule-list li,
+  .ambassador-schedule .schedule-list .content {
+    width: 100%;
+  }
+
+  .ambassador-schedule .schedule-list li {
+    flex-direction: column;
+  }
+
+  .ambassador-schedule .schedule-list li::before {
+    flex-direction: column;
+    margin: 1.2rem 0;
+    background: url(../assets/icon/icon-polygon-down.svg) no-repeat center /
+      cover;
+  }
+
+  .ambassador-schedule .schedule-list .content {
+    padding: 2rem 0;
+  }
+
+  .ambassador-schedule .schedule-list p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .ambassador-schedule .schedule-list strong {
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 
   /* section - 지난 활동 */
+  .ambassador-past-activity .wrap {
+    padding: 4rem 0;
+  }
+
   .ambassador-past-activity .activity-title {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .ambassador-past-activity .activity-list {
+    padding: 2rem;
     gap: 2rem;
   }
 
@@ -992,16 +1021,82 @@
   }
 
   .ambassador-past-activity .activity-list p {
-    font-weight: 500;
     font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  /* section - 활동 후기 */
+  .ambassador-review .wrap {
+    padding: 4rem 0 3rem;
+  }
+
+  .ambassador-review .review-title {
+    margin-bottom: 4rem;
+  }
+
+  .ambassador-review .review-list {
+    gap: 2rem;
+  }
+
+  .ambassador-review .review-list li {
+    height: 33.2rem;
+  }
+
+  .ambassador-review .review-list .profile {
+    margin-bottom: 2rem;
+  }
+
+  .ambassador-review .review-list .profile-img {
+    width: 6rem;
+    height: 6rem;
+    margin-right: 1.2rem;
+  }
+
+  .ambassador-review .review-list p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+  }
+
+  /* section - 위니브 contents */
+  .ambassador-contents .wrap {
+    padding: 4rem 0 3.6rem;
+  }
+
+  .ambassador-contents .section-title {
+    font-size: 1.8rem;
     line-height: 2.4rem;
   }
 
+  .ambassador-contents p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin: 1.5rem 0 2.3rem;
+  }
+
+  .ambassador-contents .btn-l {
+    width: 18rem;
+    height: 4rem;
+  }
+
+  /* section - FAQ */
+  .ambassador-faq .wrap {
+    padding: 4rem 0;
+  }
+
+  .ambassador-faq .faq-list {
+    gap: 1rem;
+    margin-top: 2.8rem;
+  }
+
   /* 푸터 */
-  .footer .weniv-greeting h2 {
-    font-size: 2.4rem;
-    line-height: 2.9rem;
-    margin-bottom: 3.2rem;
+  .footer .footer-top {
+    padding: 4rem 0 12rem;
+  }
+
+  .footer .weniv-greeting .section-title {
+    margin-bottom: 2.4rem;
   }
 
   .footer .link-list {
@@ -1010,17 +1105,11 @@
   }
 
   .footer .copyrigt {
-    font-size: 1.4rem;
-    line-height: 1.7rem;
-    padding: 3.2rem 0;
+    padding: 4rem 0;
   }
 }
 
 @media (max-width: 550px) {
-  .header .wrap {
-    padding: 1.5rem 0;
-  }
-
   .banner {
     margin: 7rem 0 0;
   }

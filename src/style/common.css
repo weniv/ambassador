@@ -172,6 +172,14 @@ textarea::placeholder {
   box-sizing: border-box;
 }
 
+@media (max-width: 770px) {
+  .btn-m,
+  .btn-l {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
 .btn-blue {
   border: 0.2rem solid var(--ColorPrimary);
   color: var(--ColorPrimary);
@@ -192,8 +200,16 @@ textarea::placeholder {
   padding: 1rem 2rem;
   text-align: center;
   font-size: 1.6rem;
+  font-weight: 600;
   line-height: 2.2rem;
   box-sizing: border-box;
+}
+
+@media (max-width: 770px) {
+  .tag {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 
 .name {
@@ -201,6 +217,13 @@ textarea::placeholder {
   font-size: 1.8rem;
   line-height: 2.4rem;
   color: var(--ColorLightBlue);
+}
+
+@media (max-width: 770px) {
+  .name {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
 }
 
 ul::-webkit-scrollbar {
