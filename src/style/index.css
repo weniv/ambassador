@@ -233,10 +233,10 @@
 }
 
 .ambassador-benefit .benefit-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 20rem);
-  justify-content: space-between;
-  gap: 1.2rem;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  column-gap: calc((100% - 20rem * 5) / 4);
   text-align: center;
   font-size: 1.8rem;
   font-weight: 600;
@@ -246,6 +246,12 @@
 .ambassador-benefit .benefit-list img {
   width: 100%;
   height: auto;
+}
+
+.ambassador-benefit .benefit-list p {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.4rem;
 }
 
 /* section - 활동 안내 */
@@ -684,7 +690,6 @@
 .top-btn {
   display: none;
   position: fixed;
-  /* bottom: 15rem; */
   bottom: 4rem;
   right: 3rem;
   width: 5rem;
@@ -729,11 +734,6 @@
     text-align: left;
   }
 
-  /* section - 혜택, 일정 */
-  .ambassador-benefit .benefit-list {
-    grid-template-columns: repeat(auto-fit, 16rem);
-  }
-
   /* section - 진행 일정 */
   .ambassador-schedule .schedule-list {
     flex-wrap: wrap;
@@ -745,7 +745,7 @@
 
   /* 푸터 */
   .footer .footer-top {
-    padding: 10rem 0 12rem;
+    padding: 10rem 0 16rem;
   }
 
   .footer .footer-top .wrap {
@@ -784,7 +784,7 @@
 
   .footer .btn-apply {
     left: 50%;
-    bottom: -8rem;
+    bottom: -10rem;
     transform: translateX(-50%);
   }
 }
@@ -895,11 +895,22 @@
   }
 
   .ambassador-benefit .benefit-list {
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 0.4rem;
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 2.2rem;
-    grid-template-columns: repeat(auto-fill, 10rem);
     padding: 0;
+  }
+
+  .ambassador-benefit .benefit-list li {
+    width: 10rem;
+  }
+
+  .ambassador-benefit .benefit-list p {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
   }
 
   /* section - 활동 안내 */
@@ -1057,6 +1068,7 @@
   .ambassador-contents .section-title {
     font-size: 1.8rem;
     line-height: 2.4rem;
+    word-break: keep-all;
   }
 
   .ambassador-contents p {
@@ -1094,41 +1106,20 @@
     gap: 1.4rem;
   }
 
-  .footer .copyrigt {
-    padding: 4rem 0;
+  .footer .btn-apply {
+    width: 18rem;
+    height: 4rem;
+    bottom: -8rem;
   }
 
-  /* top 버튼 */
-  /* .top-btn {
-    bottom: 12rem;
-  } */
+  .footer .copyrigt {
+    padding: 4rem 0;
+    font-weight: 400;
+  }
 }
 
 @media (max-width: 550px) {
-  /* .banner {
-    margin: 7rem 0 0;
-  } */
-
-  /* .header .btn-apply,
-  .banner .btn-apply {
-    width: 10rem;
-    padding: 1rem 0;
-    font-weight: 600;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-  } */
-
-  /* .banner .banner-btn-list {
-    bottom: 1rem;
-  } */
-
-  /* .banner .banner-list p {
-    display: none;
-  } */
-
-  /* .banner .banner-list strong {
-    font-size: 2rem;
-    line-height: 2.4rem;
-    margin: 0 0 1.4rem;
-  } */
+  .ambassador-contents .section-title > span {
+    display: block;
+  }
 }
