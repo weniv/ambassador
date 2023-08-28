@@ -309,11 +309,10 @@
 .ambassador-schedule .schedule-list li {
   display: flex;
   align-items: center;
-  flex-shrink: 0;
 }
 
 .ambassador-schedule .schedule-list .content {
-  width: 20rem;
+  width: calc((119rem - 6rem - 19.2rem) / 5);
   padding: 3rem 0 3.2rem;
   border-radius: 3rem;
   background: var(--ColorGrayLv1);
@@ -936,7 +935,7 @@
 
   /* 진행 일정 */
   .ambassador-schedule .wrap {
-    padding: 4rem 0 5rem;
+    padding: 4rem 1.5rem 5rem;
   }
 
   .ambassador-schedule .section-title {
@@ -1094,7 +1093,7 @@
 
   /* 푸터 */
   .footer .footer-top {
-    padding: 4rem 0 12rem;
+    padding: 4rem 1.5rem 12rem;
   }
 
   .footer .weniv-greeting .section-title {
@@ -1119,6 +1118,14 @@
 }
 
 @media (max-width: 550px) {
+  .max-width {
+    max-width: calc(100% - 3rem);
+  }
+
+  .ambassador-activity p > span {
+    display: block;
+  }
+
   .ambassador-contents .section-title > span {
     display: block;
   }
