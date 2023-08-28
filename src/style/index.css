@@ -57,6 +57,10 @@
   margin: 3rem 0 4rem;
 }
 
+.banner .btn-apply > span {
+  margin-right: 0.4rem;
+}
+
 .banner .banner-list .banner-full {
   background: url("../assets/banner-img.png") center center / cover no-repeat;
   text-align: center;
@@ -292,7 +296,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.4rem 0;
+  gap: 2rem 0;
   text-align: center;
 }
 
@@ -719,18 +723,6 @@
     width: 38rem;
   }
 
-  /* 배너 */
-  .banner .banner-list p {
-    font-size: 2rem;
-    line-height: 2.4rem;
-  }
-
-  .banner .banner-list strong {
-    font-size: 4.4rem;
-    line-height: 6.2rem;
-    margin: 2rem 0 3rem;
-  }
-
   /* section - 공지 */
   .ambassador-notice .wrap {
     justify-content: flex-start;
@@ -798,18 +790,51 @@
 }
 
 @media (max-width: 780px) {
+  .header .wrap {
+    height: 6rem;
+  }
+
   /* 배너 */
+  .banner {
+    margin: 6rem 0 0;
+  }
+
+  .banner .banner-list li {
+    padding-top: calc(300 / 390 * 100%);
+  }
+
   .banner .banner-list p {
     font-size: 1.6rem;
-    line-height: 1.9rem;
+    line-height: 2.2rem;
   }
 
   .banner .banner-list strong {
-    font-size: 2.4rem;
-    line-height: 3.4rem;
-    margin: 1.6rem 0 2rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin: 1.1rem 0 2rem;
   }
 
+  .banner .btn-apply {
+    width: 12rem;
+    height: 4rem;
+  }
+
+  .banner .btn-apply > span {
+    overflow: hidden;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  }
+
+  .banner .banner-btn-list {
+    bottom: 1.2rem;
+  }
+
+  /* 메인 */
   .main {
     padding-top: 3rem;
   }
@@ -1080,30 +1105,30 @@
 }
 
 @media (max-width: 550px) {
-  .banner {
+  /* .banner {
     margin: 7rem 0 0;
-  }
+  } */
 
-  .header .btn-apply,
+  /* .header .btn-apply,
   .banner .btn-apply {
     width: 10rem;
     padding: 1rem 0;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.6rem;
-  }
+  } */
 
-  .banner .banner-btn-list {
+  /* .banner .banner-btn-list {
     bottom: 1rem;
-  }
+  } */
 
-  .banner .banner-list p {
+  /* .banner .banner-list p {
     display: none;
-  }
+  } */
 
-  .banner .banner-list strong {
+  /* .banner .banner-list strong {
     font-size: 2rem;
     line-height: 2.4rem;
     margin: 0 0 1.4rem;
-  }
+  } */
 }
