@@ -690,8 +690,7 @@
 .top-btn {
   display: none;
   position: fixed;
-  bottom: 4rem;
-  right: 3rem;
+  right: 4rem;
   width: 5rem;
   height: 5rem;
   background: var(--ColorGrayLv2) url("../assets/icon/icon-up-arrow.svg")
@@ -1117,6 +1116,10 @@
   .footer .copyright {
     padding: 4rem 0;
     font-weight: 400;
+  }
+
+  .top-btn {
+    right: 2rem;
   }
 }
 

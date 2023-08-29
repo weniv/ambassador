@@ -150,7 +150,7 @@ const moveTopBtn = htmlScrollTop => {
     if (window.matchMedia("(max-width: 780px)").matches) {
       topBtn.style.bottom = `${copyrightHeight + 20}px`;
     } else {
-      topBtn.style.bottom = `${copyrightHeight + 40}px`;
+      topBtn.style.bottom = `${copyrightHeight + 60}px`;
     }
   } else {
     topBtn.style.bottom = "4rem";
