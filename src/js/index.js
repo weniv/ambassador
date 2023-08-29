@@ -1,5 +1,4 @@
-const topBtn = document.querySelector(".top-btn");
-const footer = document.querySelector(".footer");
+// 배너
 const banner = document.querySelector(".banner");
 const bannerList = document.querySelectorAll(".banner-list li");
 const bannerBtnList = document.querySelector(".banner-btn-list");
@@ -125,11 +124,36 @@ banner.addEventListener("touchend", e => {
   }
 });
 
+// top 버튼
+const topBtn = document.querySelector(".top-btn");
+const footer = document.querySelector(".footer");
+const copyrightDiv = document.querySelector(".copyright");
+
+// 활성화/비활성화
 const activeScrollTopBtn = htmlScrollTop => {
   if (htmlScrollTop > 100) {
     topBtn.classList.add("active");
   } else {
     topBtn.classList.remove("active");
+  }
+};
+
+// 스크롤이 copyright를 만난 경우에는 copyright 위로 이동
+const moveTopBtn = htmlScrollTop => {
+  const htmlScrollHeight = document.querySelector("html").scrollHeight;
+  const copyrightHeight = copyrightDiv.offsetHeight;
+
+  if (
+    htmlScrollHeight - (htmlScrollTop + window.innerHeight) <=
+    copyrightHeight
+  ) {
+    if (window.matchMedia("(max-width: 780px)").matches) {
+      topBtn.style.bottom = `${copyrightHeight + 20}px`;
+    } else {
+      topBtn.style.bottom = `${copyrightHeight + 40}px`;
+    }
+  } else {
+    topBtn.style.bottom = "4rem";
   }
 };
 
@@ -143,7 +167,21 @@ topBtn.addEventListener("click", () => {
 
 window.addEventListener("scroll", function () {
   const htmlScrollTop = document.querySelector("html").scrollTop;
+
   activeScrollTopBtn(htmlScrollTop);
+  moveTopBtn(htmlScrollTop);
+});
+
+window.addEventListener("resize", function () {
+  const htmlScrollTop = document.querySelector("html").scrollTop;
+
+  moveTopBtn(htmlScrollTop);
+});
+
+window.addEventListener("load", function () {
+  const htmlScrollTop = document.querySelector("html").scrollTop;
+
+  moveTopBtn(htmlScrollTop);
 });
 
 // FAQ 리스트 버튼
