@@ -672,7 +672,7 @@
   bottom: 0;
 }
 
-.footer .copyrigt {
+.footer .copyright {
   padding: 6rem 0;
   background: var(--ColorBackground);
   color: var(--ColorGrayLv3);
@@ -682,7 +682,7 @@
   line-height: 2rem;
 }
 
-.footer .copyrigt p {
+.footer .copyright p {
   opacity: 0.8;
 }
 
@@ -1113,7 +1113,7 @@
     bottom: -8rem;
   }
 
-  .footer .copyrigt {
+  .footer .copyright {
     padding: 4rem 0;
     font-weight: 400;
   }
