@@ -56,12 +56,17 @@
   font-weight: 600;
 }
 
-.banner .banner-list strong {
+.banner .banner-list .banner-text {
   display: block;
   font-size: 4.8rem;
   font-weight: 700;
   line-height: 6.8rem;
   margin: 3rem 0 4rem;
+}
+
+.banner .banner-list .banner-small {
+  font-size: 3.6rem;
+  line-height: 6.8rem;
 }
 
 .banner .btn-apply > span {
@@ -820,7 +825,7 @@
     line-height: 2.2rem;
   }
 
-  .banner .banner-list strong {
+  .banner .banner-list .banner-text {
     font-size: 1.8rem;
     line-height: 2.8rem;
     margin: 1.1rem 0 2rem;
